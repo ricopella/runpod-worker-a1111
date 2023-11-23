@@ -73,6 +73,12 @@ wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-
 echo "Downloading SDXL VAE"
 wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
 
+# Custome models
+echo "Downloading Custom models"
+wegt -O epicrealism.safetensors https://civitai.com/api/download/models/143906?type=Model&format=SafeTensor&size=pruned&fp=fp16
+wget -O majicMixv7.safetensor https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16
+wget -O majicMixv6.seafetensor https://civitai.com/api/download/models/94640?type=Model&format=SafeTensor&size=pruned&fp=fp16
+
 echo "Downloading SD 1.5 ControlNet models"
 mkdir -p /workspace/stable-diffusion-webui/models/ControlNet
 cd /workspace/stable-diffusion-webui/models/ControlNet
@@ -86,6 +92,20 @@ wget https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f
 
 echo "Downloading SDXL ControlNet models"
 wget https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_full.safetensors
+
+
+echo "Downloading Loras with GDown"
+pip3 install gdown
+cd /workspace/stable-diffusion-webui/loras
+gdown 'https://drive.google.com/uc?id=1Iz25bIi-YMNKa2YxH2rBhA7cqtM-a4Od'
+gdown 'https://drive.google.com/uc?id=1dKDtsCBjGKIgIozqPQleh20IKLdtO3ur'
+gdown 'https://drive.google.com/uc?id=1Lnfz1zaAiCZkfCpOYArNk7DOCjO8IfTW'
+gdown 'https://drive.google.com/uc?id=1OFosyVS4q_oaeYaK8zrr55-UGK7Qek_z'
+gdown 'https://drive.google.com/uc?id=1ZGrSHnONo6TQZCXahLNbmuWYuhdLT6sb'
+gdown 'https://drive.google.com/uc?id=1b7VBojL1ACrvy83bCGl2dg2kGuHZIKJf'
+
+cd /workspace/stable-diffusion-webui/embeddings
+wget -O overside_coat-10.safetensors "https://civitai.com/api/download/models/103762?type=Model&format=SafeTensor"
 
 echo "Downloading Upscalers"
 mkdir -p /workspace/stable-diffusion-webui/models/ESRGAN
