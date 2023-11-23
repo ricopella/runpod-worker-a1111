@@ -75,9 +75,8 @@ wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.
 
 # Custome models
 echo "Downloading Custom models"
-wegt -O epicrealism.safetensors https://civitai.com/api/download/models/143906?type=Model&format=SafeTensor&size=pruned&fp=fp16
 wget -O majicMixv7.safetensor https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16
-wget -O majicMixv6.seafetensor https://civitai.com/api/download/models/94640?type=Model&format=SafeTensor&size=pruned&fp=fp16
+wget -O majicMixv6.safetensor https://civitai.com/api/download/models/94640?type=Model&format=SafeTensor&size=pruned&fp=fp16
 
 echo "Downloading SD 1.5 ControlNet models"
 mkdir -p /workspace/stable-diffusion-webui/models/ControlNet
