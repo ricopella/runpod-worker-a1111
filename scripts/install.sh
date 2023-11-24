@@ -95,7 +95,7 @@ wget https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffus
 
 echo "Downloading Loras with GDown"
 pip3 install gdown
-cd /workspace/stable-diffusion-webui/loras
+cd /workspace/stable-diffusion-webui/models/Lora
 gdown 'https://drive.google.com/uc?id=1Iz25bIi-YMNKa2YxH2rBhA7cqtM-a4Od'
 gdown 'https://drive.google.com/uc?id=1dKDtsCBjGKIgIozqPQleh20IKLdtO3ur'
 gdown 'https://drive.google.com/uc?id=1Lnfz1zaAiCZkfCpOYArNk7DOCjO8IfTW'
